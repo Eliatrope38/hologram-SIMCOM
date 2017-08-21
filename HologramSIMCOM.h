@@ -9,6 +9,7 @@
 #ifndef __HologramSIMCOM_H__
 #define __HologramSIMCOM_H__
 
+
 #include "Arduino.h"
 #include <SoftwareSerial.h>
 
@@ -68,6 +69,8 @@ private:
     // Client functions
     bool _sendMessage(const String data);
     bool _sendResponse(const char* data);
+
+
 };
 
 #endif

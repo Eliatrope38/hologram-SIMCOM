@@ -28,7 +28,8 @@ bool HologramSIMCOM::begin(const int baud) {
     // Start serials
     if(!Serial) { // if user did not begin Serial then we will
         Serial.begin(baud);
-        while(!Serial); // wait for Serial to be ready
+    //    while(!Serial); // wait for Serial to be ready
+      delay(1000); //non blocking if serial not available after 1s we continue
     }
     serialHologram.begin(baud);
     while(!serialHologram); // wait for Serial to be ready
